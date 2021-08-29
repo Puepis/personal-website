@@ -1,13 +1,12 @@
 import type { NextPage } from "next";
 import PrimaryLayout from "../layouts/PrimaryLayout";
-import Bio from "../components/Bio";
-import SocialBar from "../components/SocialBar";
 
 const Home: NextPage = () => {
   return (
     <PrimaryLayout>
-      <Bio />
-      <SocialBar />
+      <p className="text-lg text-light-secondary-text dark:text-white dark:text-opacity-70 text-center leading-6">
+        My little corner where I document my cooking progress!
+      </p>
     </PrimaryLayout>
   );
 };
