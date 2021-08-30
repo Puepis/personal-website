@@ -21,7 +21,7 @@ const PrimaryLayout: FunctionComponent<Props> = ({ children }: Props) => {
   };
 
   return (
-    <div className="bg-white dark:bg-black">
+    <div>
       <Head>
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />

@@ -2,11 +2,9 @@ import { FunctionComponent } from "react";
 
 const Bio: FunctionComponent = () => {
   return (
-    <p className="text-lg text-light-secondary-text dark:text-white dark:text-opacity-70 text-center leading-6">
+    <p className="text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center">
       Hey there! I’m Philips and I'm a third year Computer Science student at the University of Waterloo. I'm passionate
-      about
-      <br />
-      full-stack development and using software to build meaningful products!
+      about full-stack development and using software to build meaningful products!
       <br />
       <br />
       I'm currently working as a Software Engineering Intern at Wish for Fall 2021. I'm also a project developer on{" "}
@@ -16,10 +14,7 @@ const Bio: FunctionComponent = () => {
       >
         UW Blueprint
       </a>
-      !
-      <br />
-      <br />
-      During my free time, I love to experiment with recipes and make tasty food!
+      ! During my free time, I love to experiment with recipes and make tasty food!
     </p>
   );
 };

@@ -13,7 +13,7 @@ const Header: FunctionComponent = () => {
           { name: "food", route: "/food" }
         ]}
       />
-      <hr className="mt-8 mb-6" />
+      <hr className="mt-6 mb-6" />
     </div>
   );
 };

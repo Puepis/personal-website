@@ -3,7 +3,7 @@ import PrimaryLayout from "../layouts/PrimaryLayout";
 import Bio from "../components/Bio";
 import SocialBar from "../components/SocialBar";
 
-const Home: NextPage = () => {
+const AboutPage: NextPage = () => {
   return (
     <PrimaryLayout>
       <Bio />
@@ -12,4 +12,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default AboutPage;
