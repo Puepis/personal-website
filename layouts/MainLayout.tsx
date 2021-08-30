@@ -3,14 +3,13 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Header from "../components/Header";
 import ThemeToggle from "../components/ThemeToggle";
-import { useTheme } from "next-themes";
+import Footer from "../components/Footer";
 
 type Props = {
   children: ReactNode;
 };
 
-const PrimaryLayout: FunctionComponent<Props> = ({ children }: Props) => {
-  const { theme } = useTheme();
+const MainLayout: FunctionComponent<Props> = ({ children }: Props) => {
   const router = useRouter();
 
   const meta = {
@@ -33,17 +32,17 @@ const PrimaryLayout: FunctionComponent<Props> = ({ children }: Props) => {
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />
-        {/* {meta.date && <meta property="article:published_time" content={meta.date} />} */}
       </Head>
       <main className="w-full">
         <ThemeToggle />
         <div className="max-w-xl mx-auto px-4 pt-28">
           <Header />
           <div>{children}</div>
+          <Footer />
         </div>
       </main>
     </div>
   );
 };
 
-export default PrimaryLayout;
+export default MainLayout;

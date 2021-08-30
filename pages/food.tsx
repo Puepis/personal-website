@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import ImageCard from "../components/ImageCard";
-import PrimaryLayout from "../layouts/PrimaryLayout";
+import MainLayout from "../layouts/MainLayout";
 import FoodEntry from "../src/types/FoodEntry";
 
 const entry: FoodEntry = {
@@ -13,7 +13,7 @@ const entry: FoodEntry = {
 
 const FoodPage: NextPage = () => {
   return (
-    <PrimaryLayout>
+    <MainLayout>
       <p className="text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center leading-6 mb-5">
         My little corner where I document my cooking progress!
       </p>
@@ -26,7 +26,7 @@ const FoodPage: NextPage = () => {
         <ImageCard item={entry} />
         <ImageCard item={entry} />
       </div>
-    </PrimaryLayout>
+    </MainLayout>
   );
 };
 
