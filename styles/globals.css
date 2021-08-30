@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  hr {
-    border: 0.5x solid #E0E0E0;
-  }
-}
-
 @layer components {
   .hyperlink-light {
     @apply underline text-light-hyperlink text-opacity-50
