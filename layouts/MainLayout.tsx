@@ -1,6 +1,5 @@
 import React, { FunctionComponent, ReactNode } from "react";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import Header from "../components/Header";
 import ThemeToggle from "../components/ThemeToggle";
 import Footer from "../components/Footer";
@@ -10,13 +9,9 @@ type Props = {
 };
 
 const MainLayout: FunctionComponent<Props> = ({ children }: Props) => {
-  const router = useRouter();
-
   const meta = {
     title: "Philips Xu",
-    description: `Third year computer science student at University of Waterloo`,
-    image: "/avatar.svg",
-    type: "website"
+    description: `A third year computer science student studying at the University of Waterloo`
   };
 
   return (
@@ -25,13 +20,8 @@ const MainLayout: FunctionComponent<Props> = ({ children }: Props) => {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://yourwebsite.com${router.asPath}`} />
-        <link rel="canonical" href={`https://yourwebsite.com${router.asPath}`} />
-        <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Philips Xu" />
-        <meta property="og:description" content={meta.description} />
-        <meta property="og:title" content={meta.title} />
-        <meta property="og:image" content={meta.image} />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+        <meta charSet="UTF-8" />
       </Head>
       <main className="w-full">
         <ThemeToggle />
