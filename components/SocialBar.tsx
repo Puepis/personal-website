@@ -30,7 +30,7 @@ const SocialBar: FunctionComponent = () => {
         )}
       </a>
 
-      <a href="https://www.linkedin.com/in/philips-xu">
+      <a href="https://www.linkedin.com/in/philips-xu" target="_blank" rel="noopener noreferrer">
         {theme === "light" ? (
           <svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -48,7 +48,8 @@ const SocialBar: FunctionComponent = () => {
           </svg>
         )}
       </a>
-      <a href="https://github.com/puepis">
+
+      <a href="https://github.com/puepis" target="_blank" rel="noopener noreferrer">
         {theme === "light" ? (
           <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -70,7 +71,8 @@ const SocialBar: FunctionComponent = () => {
           </svg>
         )}
       </a>
-      <a href="/resume.pdf">
+
+      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
         {theme === "light" ? (
           <svg width="32" height="31" viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
