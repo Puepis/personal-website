@@ -3,7 +3,7 @@ interface FoodEntry {
   description: string;
   imagePath: string;
   source?: string; // url representing recipe source
-  dateCreated: number;
+  dateCreated: Date;
 }
 
 export default FoodEntry;

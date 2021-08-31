@@ -4,7 +4,7 @@ import MainLayout from "../layouts/MainLayout";
 import FoodEntry from "../src/types/FoodEntry";
 
 const entry: FoodEntry = {
-  dateCreated: 10101,
+  dateCreated: new Date(),
   title: "Penang Char Kway Teow",
   imagePath: "/food/ckt.png",
   description: "Lorem ipsum dolor sit amet, consectetur",
@@ -19,6 +19,9 @@ const FoodPage: NextPage = () => {
       </p>
 
       <div className="w-full grid grid-cols-3 gap-4">
+        <ImageCard item={entry} />
+        <ImageCard item={entry} />
+        <ImageCard item={entry} />
         <ImageCard item={entry} />
         <ImageCard item={entry} />
         <ImageCard item={entry} />

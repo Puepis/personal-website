@@ -11,7 +11,9 @@ const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
     <div className="mb-5">
       <Image src="/food/ckt.png" width="100" height="177" layout="responsive" objectFit="cover" />
       <div className="mt-3">
-        <p className="text-sm text-light-secondary-text dark:text-white dark:text-opacity-70">{item.dateCreated}</p>
+        <p className="text-sm text-light-secondary-text dark:text-white dark:text-opacity-70">
+          {item.dateCreated.toLocaleDateString("en-US")}
+        </p>
         <p className="mt-2 text-lg leading-6 font-semibold">{item.title}</p>
         <p className="mt-3 text-sm">{item.description}</p>
         {item.source != null && (
