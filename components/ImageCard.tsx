@@ -7,9 +7,10 @@ type Props = {
 };
 
 const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
+  const { url, width, height } = item.image;
   return (
     <div className="mb-5">
-      <Image src="/food/ckt.png" width="100" height="177" layout="responsive" objectFit="cover" />
+      <Image src={url} width={width} height={height} layout="responsive" objectFit="cover" />
       <div className="mt-3">
         <p className="text-sm text-light-secondary-text dark:text-white dark:text-opacity-70">
           {item.dateCreated.toLocaleDateString("en-US")}

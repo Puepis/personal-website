@@ -7,8 +7,7 @@ interface Image {
 interface FoodEntry {
   title: string;
   description: string;
-  imagePath?: string; // todo: remove
-  image?: Image;
+  image: Image;
   source?: string; // url representing recipe source
   dateCreated: Date;
 }
