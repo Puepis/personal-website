@@ -21,6 +21,8 @@ const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
           <a
             href={item.source}
             className="inline-block mt-2 text-sm underline text-light-hyperlink text-opacity-50 dark:text-dark-hyperlink dark:text-opacity-50"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Recipe Source
           </a>

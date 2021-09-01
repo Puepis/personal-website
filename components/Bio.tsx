@@ -11,6 +11,8 @@ const Bio: FunctionComponent = () => {
       <a
         className="underline text-light-hyperlink text-opacity-50 dark:text-dark-hyperlink dark:text-opacity-50"
         href="https://uwblueprint.org/"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         UW Blueprint
       </a>
