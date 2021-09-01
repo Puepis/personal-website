@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
-import FoodEntry from "../src/types/FoodEntry";
+import { FoodEntry } from "../src/types/FoodEntry";
 
 type Props = {
   item: FoodEntry;
