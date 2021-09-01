@@ -6,8 +6,8 @@ interface Image {
 }
 interface FoodEntry {
   title: string;
-  description: string;
   image: Image;
+  description?: string;
   source?: string; // url representing recipe source
   dateCreated: Date;
 }

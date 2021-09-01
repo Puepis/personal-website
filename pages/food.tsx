@@ -9,6 +9,8 @@ type Props = {
 };
 
 const FoodPage: NextPage<Props> = ({ items }: Props) => {
+  const numColumns = 3;
+  const arr = Array.from({ length: numColumns }, (v, i) => i);
   return (
     <MainLayout>
       <p className="text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center leading-6 mb-5">
@@ -16,8 +18,14 @@ const FoodPage: NextPage<Props> = ({ items }: Props) => {
       </p>
 
       <div className="w-full grid grid-cols-3 gap-4">
-        {items.map((item, index) => (
-          <ImageCard key={index} item={item} />
+        {arr.map((_, i) => (
+          <div key={i}>
+            {items
+              .filter((_, index) => index % numColumns === i)
+              .map((item) => (
+                <ImageCard key={item.image.id} item={item} />
+              ))}
+          </div>
         ))}
       </div>
     </MainLayout>

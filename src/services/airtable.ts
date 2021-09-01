@@ -25,9 +25,9 @@ export async function fetchEntries(): Promise<FoodEntry[]> {
     records.forEach((record) => {
       const entry = {
         title: record.get("Title") as string,
-        description: record.get("Description") as string,
         image: imageFromRecord(record),
         dateCreated: new Date(record.get("Date created") as string),
+        ...(record.get("Description") && { description: record.get("Description") as string }),
         ...(record.get("Recipe source") && { source: record.get("Recipe source") as string })
       };
       entries.push(entry);
@@ -39,7 +39,9 @@ export async function fetchEntries(): Promise<FoodEntry[]> {
 
   // select all records
   try {
-    await base("Food Entries").select().eachPage(page);
+    await base("Food Entries")
+      .select({ sort: [{ field: "Date created", direction: "desc" }] })
+      .eachPage(page);
   } catch (e) {
     console.error(e);
   }
