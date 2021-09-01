@@ -26,7 +26,7 @@ export async function fetchEntries(): Promise<FoodEntry[]> {
       const entry = {
         title: record.get("Title") as string,
         image: imageFromRecord(record),
-        dateCreated: new Date(record.get("Date created") as string),
+        dateCreated: new Date((record.get("Date created") as string) + " 00:00"),
         ...(record.get("Description") && { description: record.get("Description") as string }),
         ...(record.get("Recipe source") && { source: record.get("Recipe source") as string })
       };
