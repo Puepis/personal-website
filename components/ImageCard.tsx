@@ -16,7 +16,9 @@ const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
           {item.dateCreated.toLocaleDateString("en-US")}
         </p>
         <p className="mt-2 text-lg leading-6 font-semibold">{item.title}</p>
-        {item.description != null && <p className="mt-3 text-sm">{item.description}</p>}
+        {item.description != null && (
+          <p className="mt-2 text-sm text-light-secondary-text dark:text-white dark:text-opacity-70">{item.description}</p>
+        )}
         {item.source != null && (
           <a
             href={item.source}
