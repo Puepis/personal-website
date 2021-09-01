@@ -17,7 +17,9 @@ const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
         </p>
         <p className="mt-2 text-lg leading-6 font-semibold">{item.title}</p>
         {item.description != null && (
-          <p className="mt-2 text-sm text-light-secondary-text dark:text-white dark:text-opacity-70">{item.description}</p>
+          <p className="mt-2 text-sm text-light-secondary-text dark:text-white dark:text-opacity-70">
+            {item.description}
+          </p>
         )}
         {item.source != null && (
           <a
