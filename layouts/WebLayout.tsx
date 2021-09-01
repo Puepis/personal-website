@@ -5,10 +5,11 @@ import ThemeToggle from "../components/ThemeToggle";
 import Footer from "../components/Footer";
 
 type Props = {
+  title: string;
   children: ReactNode;
 };
 
-const MainLayout: FunctionComponent<Props> = ({ children }: Props) => {
+const WebLayout: FunctionComponent<Props> = ({ title, children }: Props) => {
   const meta = {
     title: "Philips Xu",
     description: `A third year computer science student studying at the University of Waterloo`
@@ -17,7 +18,7 @@ const MainLayout: FunctionComponent<Props> = ({ children }: Props) => {
   return (
     <div>
       <Head>
-        <title>{meta.title}</title>
+        <title>{`${title} | ${meta.title}`}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
@@ -35,4 +36,4 @@ const MainLayout: FunctionComponent<Props> = ({ children }: Props) => {
   );
 };
 
-export default MainLayout;
+export default WebLayout;
