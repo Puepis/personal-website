@@ -28,7 +28,7 @@ const ThemeToggle: FunctionComponent = () => {
               fill: "white"
             }
           }}
-          transition={{ type: "spring", duration: 0.3 }}
+          transition={{ type: "spring", duration: 0.5 }}
         />
       </svg>
     </motion.button>
