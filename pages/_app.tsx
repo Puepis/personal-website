@@ -1,11 +1,14 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
+import ViewportProvider from "../components/ViewportProvider";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider enableSystem={false} attribute="class">
-      <Component {...pageProps} />
+      <ViewportProvider>
+        <Component {...pageProps} />
+      </ViewportProvider>
     </ThemeProvider>
   );
 }

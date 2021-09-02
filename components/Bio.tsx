@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 
 const Bio: FunctionComponent = () => {
   return (
-    <p className="text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center">
+    <p className="text-sm sm:text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center">
       Hey there! I’m Philips and I'm a third year Computer Science student at the University of Waterloo. I'm passionate
       about full-stack development and using software to build meaningful products!
       <br />

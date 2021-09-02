@@ -26,7 +26,7 @@ const WebLayout: FunctionComponent<Props> = ({ title, children }: Props) => {
       </Head>
       <main className="w-full">
         <ThemeToggle />
-        <div className="max-w-xl mx-auto px-4 pt-28">
+        <div className="max-w-lg sm:max-w-xl mx-auto px-6 pt-28">
           <Header />
           <div>{children}</div>
           <Footer />
