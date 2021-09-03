@@ -16,7 +16,7 @@ const FoodPage: NextPage<Props> = ({ items }: Props) => {
   return (
     <WebLayout title="Food">
       <p className="text-sm sm:text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center leading-6 mb-5">
-        My little corner where I document my cooking progress!
+        My little corner where I document my cooking!
       </p>
 
       <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-4">
