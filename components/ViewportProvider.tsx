@@ -1,4 +1,4 @@
-import { useContext, createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 type Viewport = {
   width: number;
