@@ -10,12 +10,7 @@ const Header: FunctionComponent = () => {
     <div className="flex flex-col">
       <Image src="/avatar.svg" width={`${size}`} height={`${size}`} />
       <h1 className="font-bold text-center text-4xl sm:text-5xl my-2 sm:my-4">Philips Xu</h1>
-      <Navbar
-        pages={[
-          { name: "about", route: "/" },
-          { name: "food", route: "/food" }
-        ]}
-      />
+      <Navbar />
       <hr className="my-6" />
     </div>
   );

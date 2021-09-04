@@ -17,7 +17,7 @@ const imageFromRecord = (record: Record<FieldSet>): Image => {
   };
 };
 
-export async function fetchEntries(): Promise<FoodEntry[]> {
+export async function getAllEntries(): Promise<FoodEntry[]> {
   const entries: FoodEntry[] = [];
 
   // This function (`page`) will get called for each page of records.

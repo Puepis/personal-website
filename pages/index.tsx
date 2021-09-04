@@ -1,14 +1,14 @@
 import type { NextPage } from "next";
-import WebLayout from "../layouts/WebLayout";
+import Layout from "../components/Layout";
 import Bio from "../components/Bio";
 import SocialBar from "../components/SocialBar";
 
 const AboutPage: NextPage = () => {
   return (
-    <WebLayout title="About">
+    <Layout title="About">
       <Bio />
       <SocialBar />
-    </WebLayout>
+    </Layout>
   );
 };
 

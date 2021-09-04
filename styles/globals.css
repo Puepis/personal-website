@@ -14,4 +14,8 @@
   .secondary-text-dark {
     @apply text-white text-opacity-70
   }
+
+  .navigation-underline {
+    @apply w-full border border-light-primary-text dark:border-dark-primary-text;
+}
 }

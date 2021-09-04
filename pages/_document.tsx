@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <link rel="icon" href="/images/favicon.ico" />
         </Head>
-        <body className="transition duration-300 bg-light-background dark:bg-dark-background text-black dark:text-white dark:text-opacity-90">
+        <body className="transition duration-300 ease-linear bg-light-background dark:bg-dark-background text-black dark:text-white dark:text-opacity-90">
           <Main />
           <NextScript />
         </body>

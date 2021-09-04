@@ -5,6 +5,7 @@ import { FunctionComponent, useEffect, useState } from "react";
 const SocialBar: FunctionComponent = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const hoverScale = 1.05;
 
   useEffect(() => setMounted(true), []);
 
@@ -14,7 +15,7 @@ const SocialBar: FunctionComponent = () => {
     <div className="flex flex-row items-center justify-center space-x-6 mt-7">
       <a href="mailto:y584xu@uwaterloo.ca">
         <motion.svg
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: hoverScale }}
           width="32"
           height="31"
           viewBox="0 0 32 31"
@@ -41,7 +42,7 @@ const SocialBar: FunctionComponent = () => {
 
       <a href="https://www.linkedin.com/in/philips-xu" target="_blank" rel="noopener noreferrer">
         <motion.svg
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: hoverScale }}
           width="22"
           height="21"
           viewBox="0 0 22 21"
@@ -68,7 +69,7 @@ const SocialBar: FunctionComponent = () => {
 
       <a href="https://github.com/puepis" target="_blank" rel="noopener noreferrer">
         <motion.svg
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: hoverScale }}
           width="26"
           height="25"
           viewBox="0 0 26 25"
@@ -99,7 +100,7 @@ const SocialBar: FunctionComponent = () => {
 
       <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
         <motion.svg
-          whileHover={{ scale: 1.1 }}
+          whileHover={{ scale: hoverScale }}
           width="32"
           height="31"
           viewBox="0 0 32 31"
