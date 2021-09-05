@@ -1,4 +1,4 @@
-import type { GetServerSideProps, NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import ImageGallery from "../components/ImageGallery";
 import Layout from "../components/Layout";
 import { getAllEntries } from "../src/services/airtable";
@@ -19,7 +19,7 @@ const FoodPage: NextPage<Props> = ({ items }: Props) => {
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const items = await getAllEntries();
   return {
     props: {

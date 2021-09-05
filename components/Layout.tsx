@@ -8,23 +8,23 @@ type Props = {
   children: ReactNode;
 };
 
+const distance = 50;
+
 const variants = {
   center: {
-    zIndex: 1,
     x: 0,
     opacity: 1
   },
   enter: (direction: number) => {
     return {
-      opacity: 1,
-      x: direction > 0 ? 100 : -100
+      opacity: 0,
+      x: direction > 0 ? distance : -distance
     };
   },
   exit: (direction: number) => {
     return {
-      zIndex: 0,
       opacity: 0,
-      x: direction < 0 ? 100 : -100
+      x: direction < 0 ? distance : -distance
     };
   }
 };
@@ -52,7 +52,8 @@ const Layout: FunctionComponent<Props> = ({ title, children }: Props) => {
         custom={direction}
         variants={variants}
         transition={{
-          x: { type: "linear" }
+          x: { ease: "easeOut", duration: 0.2 },
+          opacity: { duration: 0.15 }
         }}
       >
         {children}
