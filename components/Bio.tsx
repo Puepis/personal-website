@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import Hyperlink from "./Hyperlink";
 
 const Bio: FunctionComponent = () => {
   return (
@@ -8,14 +9,9 @@ const Bio: FunctionComponent = () => {
       <br />
       <br />
       I'm currently working as a Software Engineering Intern at Wish for Fall 2021. I'm also a project developer on{" "}
-      <a
-        className="underline text-light-hyperlink text-opacity-50 dark:text-dark-hyperlink dark:text-opacity-50"
-        href="https://uwblueprint.org/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Hyperlink className="" href="https://uwblueprint.org/">
         UW Blueprint
-      </a>
+      </Hyperlink>
       ! During my free time, I love to experiment with recipes and make tasty food!
     </p>
   );

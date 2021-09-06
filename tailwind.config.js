@@ -15,7 +15,7 @@ module.exports = {
           background: colors.white,
           "primary-text": colors.black,
           "secondary-text": "#5D5E5F",
-          hyperlink: "#37352F"
+          hyperlink: "#8F8F8F"
         },
         dark: {
           background: "#22272E",

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FunctionComponent } from "react";
 import { FoodEntry } from "../src/types/FoodEntry";
+import Hyperlink from "./Hyperlink";
 
 type Props = {
   item: FoodEntry;
@@ -10,7 +11,7 @@ const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
   const { url, width, height } = item.image;
   return (
     <div className="mb-6 sm:mb-8">
-      <Image src={url} width={width} height={height} layout="responsive" objectFit="cover" />
+      <Image src={url} width={width} height={height} layout="responsive" objectFit="cover" alt={item.title} />
       <div className="mt-3">
         <p className="text-sm text-light-secondary-text dark:text-white dark:text-opacity-70">
           {item.dateCreated.toLocaleDateString("en-US")}
@@ -22,14 +23,9 @@ const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
           </p>
         )}
         {item.source != null && (
-          <a
-            href={item.source}
-            className="inline-block mt-2 text-sm underline text-light-hyperlink text-opacity-50 dark:text-dark-hyperlink dark:text-opacity-50"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <Hyperlink href={item.source} className=" inline-block mt-2 text-sm ">
             Recipe Source
-          </a>
+          </Hyperlink>
         )}
       </div>
     </div>
