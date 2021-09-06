@@ -13,7 +13,7 @@ const SocialBar: FunctionComponent = () => {
 
   return (
     <div className="flex flex-row items-center justify-center space-x-6 mt-7">
-      <a href="mailto:y584xu@uwaterloo.ca">
+      <a href="mailto:y584xu@uwaterloo.ca" aria-label="Email">
         <motion.svg
           whileHover={{ scale: hoverScale }}
           width="32"
@@ -40,7 +40,7 @@ const SocialBar: FunctionComponent = () => {
         </motion.svg>
       </a>
 
-      <a href="https://www.linkedin.com/in/philips-xu" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.linkedin.com/in/philips-xu" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
         <motion.svg
           whileHover={{ scale: hoverScale }}
           width="22"
@@ -67,7 +67,7 @@ const SocialBar: FunctionComponent = () => {
         </motion.svg>
       </a>
 
-      <a href="https://github.com/puepis" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/puepis" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
         <motion.svg
           whileHover={{ scale: hoverScale }}
           width="26"
@@ -98,7 +98,7 @@ const SocialBar: FunctionComponent = () => {
         </motion.svg>
       </a>
 
-      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+      <a href="/resume.pdf" aria-label="Resume" target="_blank" rel="noopener noreferrer">
         <motion.svg
           whileHover={{ scale: hoverScale }}
           width="32"

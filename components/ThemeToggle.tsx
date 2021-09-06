@@ -14,6 +14,7 @@ const ThemeToggle: FunctionComponent = () => {
       className="absolute top-0 right-0 mt-8 mr-8 z-10"
       onClick={() => setTheme(theme === "light" ? "dark" : "light")}
       animate={theme}
+      aria-label="theme-toggle"
     >
       <svg width="60" height="31" viewBox="0 0 60 31" fill="none" xmlns="http://www.w3.org/2000/svg">
         <motion.path
