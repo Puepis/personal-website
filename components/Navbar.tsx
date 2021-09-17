@@ -17,7 +17,7 @@ const Navbar: FunctionComponent = () => {
           <Link key={name} href={href} scroll={false}>
             <a
               className={`text-base ${isActiveLink(href, currentPath) ? "font-medium" : ""}`}
-              onClick={() => paginate(name)}
+              onClick={() => paginate(href)}
             >
               {name}
               {isActiveLink(href, currentPath) && (

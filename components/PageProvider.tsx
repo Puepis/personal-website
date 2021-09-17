@@ -1,4 +1,5 @@
-import { createContext, ReactNode, useState } from "react";
+import { useRouter } from "next/router";
+import { createContext, ReactNode, useEffect, useState } from "react";
 
 type PageInfo = {
   pages: { name: string; href: string }[];
@@ -25,11 +26,21 @@ const PageProvider = ({ children }: Props) => {
     }
   ];
   const [[page, direction], setPage] = useState([0, 0]);
+  const router = useRouter();
+  const currentPath = router.pathname;
 
-  const paginate = (newPage: string) => {
-    const index = pages.findIndex((page) => page.name === newPage);
-    const offset = index - page;
-    setPage([page + offset, offset]);
+  const pageIndex = (href: string) => {
+    return pages.findIndex((page) => page.href === href);
+  };
+
+  useEffect(() => {
+    setPage([pageIndex(currentPath), 0]);
+  }, []);
+
+  const paginate = (href: string) => {
+    const targetIndex = pageIndex(href);
+    const offset = targetIndex - page;
+    setPage([targetIndex, offset]);
   };
 
   return <PageContext.Provider value={{ pages, page, direction, paginate }}>{children}</PageContext.Provider>;
