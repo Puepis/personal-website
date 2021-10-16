@@ -5,7 +5,7 @@ import { FunctionComponent, useEffect, useState } from "react";
 const SocialBar: FunctionComponent = () => {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
-  const hoverScale = 1.05;
+  const hoverScale = 1.1;
 
   useEffect(() => setMounted(true), []);
 
