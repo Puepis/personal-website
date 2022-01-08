@@ -8,7 +8,7 @@ const Header: FunctionComponent = () => {
   const size = width < 640 ? 100 : 125;
   return (
     <div className="flex flex-col">
-      <Image src="/avatar.svg" width={`${size}`} height={`${size}`} alt="My avatar" />
+      <Image priority src="/avatar.svg" width={`${size}`} height={`${size}`} alt="My avatar" />
       <h1 className="font-bold text-center text-4xl sm:text-5xl my-2 sm:my-4">Philips Xu</h1>
       <Navbar />
       <hr className="my-6" />

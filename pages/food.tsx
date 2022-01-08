@@ -12,7 +12,7 @@ const FoodPage: NextPage<Props> = ({ items }: Props) => {
   return (
     <Layout title="Food">
       <p className="text-sm sm:text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center leading-6 mb-5">
-        I really love food. Here are some of my favourites!
+        I love food. Here are some of my favourites!
       </p>
       <ImageGallery items={items} />
     </Layout>
