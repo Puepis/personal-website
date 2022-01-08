@@ -3,6 +3,7 @@ interface Image {
   width: number;
   height: number;
   url: string;
+  placeholder?: string;
 }
 interface FoodEntry {
   title: string;

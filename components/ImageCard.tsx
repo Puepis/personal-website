@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { FunctionComponent, useState } from "react";
 import { FoodEntry } from "../src/types/FoodEntry";
+import FadeInImage from "./FadeInImage";
 import Hyperlink from "./Hyperlink";
 
 type Props = {
@@ -29,12 +29,11 @@ const Details: FunctionComponent<Props> = ({ item }: Props) => {
 };
 
 const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
-  const { url, width, height } = item.image;
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={isOpen ? "mb-6 sm:mb-6" : "mb-4"}>
-      <Image src={url} width={width} height={height} layout="responsive" objectFit="cover" alt={item.title} />
+    <div className={isOpen ? "mb-6 sm:mb-6" : "mb-4 rounded-lg overflow-hidden"}>
+      <FadeInImage item={item} />
       {isOpen && <Details item={item} />}
     </div>
   );

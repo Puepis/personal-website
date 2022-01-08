@@ -3,16 +3,17 @@ import Hyperlink from "./Hyperlink";
 
 const Bio: FunctionComponent = () => {
   return (
-    <p className="text-sm sm:text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-center">
-      Hey there! I’m Philips and I'm a third year Computer Science student at the University of Waterloo. I'm passionate
-      about full-stack development and using software to build meaningful products!
+    <p className="text-sm sm:text-base text-light-secondary-text dark:text-white dark:text-opacity-70 text-left">
+      Hey there! I’m a third-year Computer Science student at the University of Waterloo who loves to read about tech
+      and discover cool software!
       <br />
       <br />
-      I'm currently working as a Software Engineering Intern at Wish for Fall 2021. I'm also a project developer on{" "}
+      Outside of school, I’ve had the opportunity to learn and grow at Wish &{" "}
       <Hyperlink className="" href="https://uwblueprint.org/">
         UW Blueprint
       </Hyperlink>
-      ! During my free time, I love to experiment with recipes and make tasty food!
+      . When I’m not trying to wrap my head around software, I’m either reading manga, watching food videos on YouTube,
+      or cooking something new!
     </p>
   );
 };
