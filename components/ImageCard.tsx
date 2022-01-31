@@ -40,7 +40,7 @@ const ImageCard: FunctionComponent<Props> = ({ item }: Props) => {
 
   return (
     <motion.li layout className={isOpen ? "mb-6 sm:mb-6" : "mb-4"}>
-      <motion.div layout className="rounded-lg overflow-hidden" onClick={toggleOpen}>
+      <motion.div layout className="rounded-lg overflow-hidden hover:opacity-80" onClick={toggleOpen}>
         <FadeInImage item={item} />
       </motion.div>
       <AnimatePresence>
