@@ -32,7 +32,7 @@ const variants = {
 const Layout: FunctionComponent<Props> = ({ title, children }: Props) => {
   const meta = {
     title: "Philips Xu",
-    description: `A third year computer science student studying at the University of Waterloo`
+    description: `A CS student at UWaterloo interested in building software and all things cooking!`
   };
   const { direction } = usePaginator();
 
