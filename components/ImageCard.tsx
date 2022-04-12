@@ -11,7 +11,6 @@ type Props = {
 const Details: FunctionComponent<Props> = ({ item }: Props) => {
   const separator = " • ";
   const ingredients = item?.description?.split(",").map((x) => x.trim());
-  console.log(ingredients);
 
   return (
     <div className="mt-3">
