@@ -33,8 +33,8 @@ const FadeInImage: FunctionComponent<Props> = ({ item }: Props) => {
       <Image
         priority
         src={url}
-        width={width}
-        height={height * 0.85}
+        width={width ?? 500}
+        height={height ? height * 0.85 : 500 * 1.4}
         layout="responsive"
         objectFit="cover"
         alt={item.title}

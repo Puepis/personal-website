@@ -1,9 +1,9 @@
 interface Image {
   id: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   url: string;
-  placeholder?: string;
+  // placeholder?: string;
 }
 interface FoodEntry {
   title: string;

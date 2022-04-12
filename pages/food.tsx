@@ -1,7 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
 import ImageGallery from "../components/ImageGallery";
 import Layout from "../components/Layout";
-import { getAllEntries } from "../src/services/airtable";
+import { IPhotoRepository } from "../src/interfaces/IPhotoRepository";
+import { NotionPhotoRepository } from "../src/services/NotionPhotoRepository";
 import { FoodEntry } from "../src/types/FoodEntry";
 
 type Props = {
@@ -20,20 +21,14 @@ const FoodPage: NextPage<Props> = ({ items }: Props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const items = await getAllEntries();
+  const photoRepository: IPhotoRepository = new NotionPhotoRepository();
+  const items = await photoRepository.getAllEntries();
 
-  // TODO: this doesn't work
-  // const fetchPlaceholder = async (item: FoodEntry) => {
-  //   const { base64 } = await getPlaiceholder(item.image.url);
-  //   return { ...item, image: { ...item.image, placeholder: base64 } };
-  // };
-
-  // const fetchPlaceholders = Promise.all(items.map((item) => fetchPlaceholder(item)));
-  // items = await fetchPlaceholders;
   return {
     props: {
       items
-    }
+    },
+    revalidate: 2 * 60 * 60 // use ISR to refetch photos every 2 hours
   };
 };
 

@@ -1,0 +1,12 @@
+{
+	"editor.tabSize": 4,
+	"[typescript]": {
+		"editor.tabSize": 2
+	},
+	"[json]": {
+		"editor.tabSize": 2
+	},
+
+	// This one forces the tab to be **space**
+	"editor.insertSpaces": true
+}

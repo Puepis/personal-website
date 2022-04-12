@@ -1,0 +1,51 @@
+import Airtable, { Attachment, FieldSet, Record, Records } from "airtable";
+import { IPhotoRepository } from "../interfaces/IPhotoRepository";
+import { FoodEntry, Image } from "../types/FoodEntry";
+const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(process.env.AIRTABLE_BASE!);
+
+type Callback = () => void;
+
+type AirtableImage = Attachment & { width: number; height: number };
+
+export class AirtablePhotoRepository implements IPhotoRepository {
+  imageFromRecord = (record: Record<FieldSet>): Image => {
+    const attachments = record.get("Image") as Attachment[];
+    const photo = attachments[0] as AirtableImage;
+    return {
+      id: photo.id,
+      width: photo.width,
+      height: photo.height,
+      url: photo.url
+    };
+  };
+  async getAllEntries(): Promise<FoodEntry[]> {
+    const entries: FoodEntry[] = [];
+
+    // This function (`page`) will get called for each page of records.
+    const page = (records: Records<FieldSet>, fetchNextPage: Callback) => {
+      records.forEach((record) => {
+        const entry = {
+          title: record.get("Title") as string,
+          image: this.imageFromRecord(record),
+          dateCreated: new Date((record.get("Date created") as string) + " 00:00"),
+          ...(record.get("Description") && { description: record.get("Description") as string }),
+          ...(record.get("Recipe source") && { source: record.get("Recipe source") as string })
+        };
+        entries.push(entry);
+      });
+
+      // if there are more records page gets called again, otherwise done gets called
+      fetchNextPage();
+    };
+
+    // select all records
+    try {
+      await base("Food Entries")
+        .select({ sort: [{ field: "Date created", direction: "desc" }] })
+        .eachPage(page);
+    } catch (e) {
+      console.error(e);
+    }
+    return entries;
+  }
+}
