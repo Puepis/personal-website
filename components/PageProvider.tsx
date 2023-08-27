@@ -19,11 +19,11 @@ const PageProvider = ({ children }: Props) => {
     {
       name: "about",
       href: "/"
-    },
-    {
-      name: "food",
-      href: "/food"
     }
+    // {
+    //   name: "food",
+    //   href: "/food"
+    // }
   ];
   const [[page, direction], setPage] = useState([0, 0]);
   const router = useRouter();

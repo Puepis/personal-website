@@ -98,7 +98,7 @@ const SocialBar: FunctionComponent = () => {
         </motion.svg>
       </a>
 
-      <a href="/resume.pdf" aria-label="Resume" target="_blank" rel="noopener noreferrer">
+      {/* <a href="/resume.pdf" aria-label="Resume" target="_blank" rel="noopener noreferrer">
         <motion.svg
           whileHover={{ scale: hoverScale }}
           width="32"
@@ -123,7 +123,7 @@ const SocialBar: FunctionComponent = () => {
             transition={{ type: "spring", duration: 0.2 }}
           />
         </motion.svg>
-      </a>
+      </a> */}
     </div>
   );
 };

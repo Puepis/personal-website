@@ -9,12 +9,8 @@ const Bio: FunctionComponent = () => {
       scale!
       <br />
       <br />
-      Outside of school, I’ve had the opportunity to learn and grow at BitGo, Wish &{" "}
-      <Hyperlink className="" href="https://uwblueprint.org/">
-        UW Blueprint
-      </Hyperlink>
-      . When I’m not trying to wrap my head around software, I’m probably cooking, experimenting with recipes, or
-      relaxing to music!
+      Outside of school, I’ve had the opportunity to learn and grow at GTS, BitGo, Wish & UW Blueprint. When I’m not
+      trying to wrap my head around software, I’m probably experimenting with new recipes or relaxing to music!
     </p>
   );
 };
